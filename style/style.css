@@ -1,0 +1,258 @@
+.container .content table .table-top h3, .container .filters .filters-wrapper .dropdown .dropdown-item, .container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options .btn-wrapper .dropdown-options-apply, .container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options .btn-wrapper .dropdown-options-reset, .container .filters h3 {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.container .filters .filters-wrapper .dropdown .btn, .container .filters .filters-wrapper .filter-buttons, .container .filters .filters-wrapper .dropdown-first {
+  border-radius: 5px;
+  width: 162px;
+  height: 30px;
+  border: 1px solid #C2CFE0;
+  padding-left: 12px;
+  font-size: 14px;
+  line-height: 16px;
+  outline: none;
+  background: #FFFFFF;
+  color: #34495D;
+  text-align: left;
+}
+
+body {
+  background: #E5E5E5;
+}
+
+.container {
+  background: #FFF;
+  margin: 50px auto;
+  max-width: 920px;
+  border-radius: 5px;
+  border: 1px solid #C2CFE0;
+  padding: 0;
+}
+.container .header {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 30px 20px 24px;
+  border-bottom: 1px solid #C2CFE0;
+}
+.container .header h1 {
+  color: #37474F;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+.container .header h1::after {
+  position: relative;
+  top: 2px;
+  left: 7px;
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/circle.png);
+}
+.container .header .header-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 235px;
+  align-items: center;
+}
+.container .header .header-left h3 {
+  font-family: "Roboto", sans-serif;
+  color: #C2CFE0;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 0;
+  transition: 0.25s;
+}
+.container .header .header-left .recrawl:hover {
+  color: #0288D1;
+}
+.container .header .header-left .remove:hover {
+  color: #FB6868;
+}
+.container .filters {
+  background: #EAEDF5;
+  padding: 13px 30px 11px 20px;
+}
+.container .filters h3 {
+  margin: 0;
+  padding: 0;
+  color: #37474F;
+}
+.container .filters .filters-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.container .filters .filters-wrapper .dropdown-first {
+  color: #A5B5CB;
+}
+.container .filters .filters-wrapper .dropdown-first input {
+  all: unset;
+  line-height: 30px;
+  width: calc(100% - 31px);
+}
+.container .filters .filters-wrapper .dropdown-first .dropdown-options {
+  display: block;
+  background: #fff;
+  border: 1px solid #C2CFE0;
+  border-radius: 5px;
+  width: 275px;
+  padding: 0 21px 12px 18px;
+}
+.container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options {
+  z-index: 100000;
+  position: relative;
+  display: none;
+  top: 2px;
+  left: -12px;
+}
+.container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options li {
+  list-style: none;
+  display: block;
+}
+.container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options li.active::before {
+  background: #0ada14;
+}
+.container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options li::after {
+  background: #993c11;
+  width: 6px;
+  height: 6px;
+  top: -11px;
+  left: -23px;
+}
+.container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options li::before, .container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options li::after {
+  position: relative;
+  content: "";
+  display: block;
+  border-radius: 50%;
+}
+.container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options li::before {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #0400ff;
+  top: 18px;
+  left: -30px;
+}
+.container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options .dropdown-option input[type=radio] {
+  all: unset;
+}
+.container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options .btn-wrapper {
+  display: flex;
+  border-top: 1px solid #C2CFE0;
+  padding-top: 10px;
+}
+.container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options .btn-wrapper .dropdown-options-reset {
+  border: none;
+  background: none;
+  color: #FB6868;
+  margin-left: 5px;
+  cursor: pointer;
+  outline: none;
+}
+.container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options .btn-wrapper .dropdown-options-apply {
+  border: none;
+  background: none;
+  color: #0288D1;
+  margin-left: 140px;
+  cursor: pointer;
+  outline: none;
+}
+.container .filters .filters-wrapper .filter-buttons {
+  padding-top: 5px;
+}
+.container .filters .filters-wrapper .filter-buttons::after {
+  content: "";
+  position: relative;
+  top: -21px;
+  right: -117px;
+  display: block;
+  width: 1px;
+  height: 28px;
+  background: #C2CFE0;
+}
+.container .filters .filters-wrapper .dropdown::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 12px;
+  height: 8px;
+  top: -19px;
+  left: 140px;
+  background-image: url(../img/chevron_up_solid.png);
+}
+.container .filters .filters-wrapper .dropdown .btn {
+  display: flex;
+}
+.container .filters .filters-wrapper .dropdown .dropdown-toggle::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -6px;
+  right: -117px;
+  display: block;
+  width: 1px;
+  height: 28px;
+  background: #C2CFE0;
+}
+.container .filters .filters-wrapper .dropdown .dropdown-toggle::after {
+  content: "";
+  display: none;
+  width: 0;
+  height: 0;
+}
+.container .filters .filters-wrapper .dropdown .dropdown-item {
+  font-family: "Roboto", sans-serif;
+  color: #37474F;
+}
+.container .content table {
+  width: 100%;
+}
+.container .content table .table-top {
+  background: #F6F8FE;
+}
+.container .content table .table-top h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #34495D;
+}
+.container .content table .data-table tr {
+  border-top: 1px solid #C2CFE0;
+  background: #eeeede;
+}
+.container .content table .table-tr {
+  border-top: 1px solid #C2CFE0;
+  background: #FB6868;
+}
+.container .content table .checkbox {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+}
+.container .content table .recrewl {
+  border: 1px solid #0288D1;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 15px;
+  background: #FFFFFF;
+  color: #0288D1;
+  width: 72px;
+  height: 25px;
+}
+.container .content table .recrewl:hover {
+  background: #D2EFFF;
+}
+.container .content table .remove {
+  display: flex;
+  margin: 0 auto;
+  fill: red;
+}
+
+/*# sourceMappingURL=style.css.map */

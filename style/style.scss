@@ -1,0 +1,292 @@
+$font-family: 'Roboto', sans-serif;
+$primary-color: #C2CFE0;
+$secondary-color: #37474F;
+$third-color: #0288D1;
+$danger-color: #FB6868;
+$b-radius: 5px;
+$border-primary-color: 1px solid $primary-color;
+
+%font {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+%buttons {
+    border-radius: $b-radius;
+    width: 162px;
+    height: 30px;
+    border: $border-primary-color;
+    padding-left: 12px;
+    font-size: 14px;
+    line-height: 16px;
+    outline: none;  
+    background: #FFFFFF;
+    color: #34495D;
+    text-align: left;
+}
+
+body {
+    background: #E5E5E5;
+}
+
+.container {
+    background: #FFF;
+    margin: 50px auto;
+    max-width: 920px;
+    border-radius: $b-radius;
+    border: $border-primary-color;
+    padding: 0;
+    
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 30px 20px 24px;
+    border-bottom: $border-primary-color;
+        h1 {
+        color: $secondary-color;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        font-family: $font-family;
+        margin: 0;      
+    }
+        h1::after {
+            position: relative;
+            top: 2px;
+            left: 7px;
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-image: url(../img/circle.png);
+        }
+        .header-left {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 235px;
+        align-items: center;
+            h3 {
+            font-family: $font-family;
+            color: $primary-color;
+            font-size: 14px;
+            line-height: 16px;
+            margin: 0;
+            transition: .25s;
+        }
+            .recrawl:hover {
+            color: $third-color;
+        }
+            .remove:hover {
+            color: $danger-color;
+        }
+    }
+}
+.filters {
+     background: #EAEDF5;
+     padding: 13px 30px 11px 20px;
+     h3 {
+        margin: 0;
+        padding: 0;
+        @extend %font;
+        color: $secondary-color;
+     }
+     .filters-wrapper {
+        display: flex;
+        justify-content: space-between;
+        
+        .dropdown-first {
+            @extend %buttons;
+            color: #A5B5CB; 
+            
+            input {
+                all: unset;
+                line-height: 30px;
+                width: calc(100% - 31px);
+            }
+            .dropdown-options{
+                display: block;
+                background: #fff;
+                border: $border-primary-color;
+                border-radius: $b-radius;
+                width: 275px;
+                padding: 0 21px 12px 18px;
+            }
+            &.dropdown-single{
+                .dropdown-options{
+                    z-index: 100000;
+                    position: relative;
+                    display: none;
+                    top: 2px;
+                    left: -12px;
+                    li {
+                        list-style: none;
+                        display: block;
+                        
+                        &.active::before{
+                            background: rgb(10, 218, 20); 
+                                                       
+                        }
+                        &::after {
+                            background: rgb(153, 60, 17);
+                            width: 6px;
+                            height: 6px;
+                            top: -11px;
+                            left: -23px;
+                        }
+                        &::before, &::after{
+                            position: relative;
+                            content:'';                            
+                            display: block;
+                            border-radius: 50%;
+                        }
+                        &::before{                            
+                            width: 20px;
+                            height: 20px;
+                            border: 3px solid rgb(4, 0, 255);                           
+                            top: 18px;
+                            left: -30px;
+                        }
+                    }
+                    .dropdown-option{                        
+                        input[type=radio] {
+                            all: unset;
+                        }
+                    }
+                    .btn-wrapper {
+                        display: flex;
+                        border-top: 1px solid $primary-color;
+                        padding-top: 10px;
+                        .dropdown-options-reset {
+                            border: none;
+                            background: none;
+                            color: $danger-color;
+                            @extend %font;
+                            margin-left: 5px;
+                            cursor: pointer;
+                            outline: none;
+                        }
+                        .dropdown-options-apply {
+                            border: none;
+                            background: none;
+                            color: $third-color;
+                            margin-left: 140px;
+                            @extend %font;
+                            cursor: pointer;
+                            outline: none;
+                        }
+                    }
+                    
+                }
+            }
+         }
+
+         .filter-buttons {
+            @extend %buttons;
+            padding-top: 5px;
+            &::after {
+                content: "";
+                position: relative;
+                top: -21px;
+                right: -117px;
+                display: block;
+                width: 1px;
+                height: 28px;
+                background: $primary-color;
+            }
+            }
+             .dropdown {
+             &::after {
+                 content: "";
+                 position: relative;
+                 display: block;
+                 width: 12px;
+                 height: 8px;
+                 top: -19px;
+                 left: 140px;
+                 background-image: url(../img/chevron_up_solid.png);
+             }
+                .btn {
+                    @extend %buttons;
+                    display: flex;
+                }
+                
+                .dropdown-toggle::before {
+                        content: "";
+                        display: block;
+                        position: relative;
+                        top: -6px;
+                        right: -117px;
+                        display: block;
+                        width: 1px;
+                        height: 28px;
+                        background: $primary-color;
+                }
+                .dropdown-toggle::after {
+                    content: "";
+                    display: none;
+                    width: 0;
+                    height: 0;  
+                }
+                 .dropdown-item {
+                    font-family: $font-family;
+                    @extend %font;
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+
+ .content {
+       table {
+        width: 100%;
+        
+        .table-top {
+            background: #F6F8FE;
+                h3 {
+                font-family: $font-family;
+                font-weight: bold;
+                @extend %font;
+                color:#34495D;
+            }
+            
+        }
+        .data-table tr {
+            border-top: 1px solid #C2CFE0;
+            background: rgb(238, 238, 222);
+        }
+        .table-tr {
+            border-top: 1px solid #C2CFE0;
+            background: $danger-color;
+        }
+        .checkbox {
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 20px;
+        }
+        
+        .recrewl {
+            border: 1px solid #0288D1;
+            border-radius: 4px;
+            font-family: $font-family;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 13px;
+            line-height: 15px;
+            background: #FFFFFF;
+            color: #0288D1;
+            width: 72px;
+            height: 25px;
+                &:hover {
+                    background: #D2EFFF;
+            }
+        }
+        .remove {
+            display: flex;
+        margin: 0 auto;
+            fill: red;
+          }
+    }
+ }
+}
