@@ -27,7 +27,7 @@ let popapWindow = document.getElementById('popap-window');
 let borderPopap = document.getElementById('dropdown-first');
 showPopap.onclick = function() {
     popapWindow.style.display = 'block';
-    borderPopap.style.borderColor = "blue";
+    borderPopap.classList.add('active');
 };
 closePopap.onclick = function() {
     popapWindow.style.display = 'none';

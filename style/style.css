@@ -15,6 +15,10 @@
   background: #FFFFFF;
   color: #34495D;
   text-align: left;
+  box-shadow: none;
+}
+.container .filters .filters-wrapper .dropdown .active.btn, .container .filters .filters-wrapper .active.filter-buttons, .container .filters .filters-wrapper .active.dropdown-first {
+  border: 1px solid #0288D1;
 }
 
 body {
@@ -103,6 +107,9 @@ body {
   width: 275px;
   padding: 0 21px 12px 18px;
 }
+.container .filters .filters-wrapper .dropdown-first.dropdown-single.active {
+  border-color: #0288d1;
+}
 .container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options {
   z-index: 100000;
   position: relative;
@@ -114,15 +121,16 @@ body {
   list-style: none;
   display: block;
 }
-.container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options li.active::before {
-  background: #0ada14;
+.container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options li.active::after {
+  background: radial-gradient(circle, rgba(2, 136, 209, 0.15) 0%, rgba(2, 136, 209, 0.45) 35%, #0288d1 100%);
+  visibility: visible;
 }
 .container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options li::after {
-  background: #993c11;
   width: 6px;
   height: 6px;
   top: -11px;
   left: -23px;
+  visibility: hidden;
 }
 .container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options li::before, .container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options li::after {
   position: relative;
@@ -133,7 +141,7 @@ body {
 .container .filters .filters-wrapper .dropdown-first.dropdown-single .dropdown-options li::before {
   width: 20px;
   height: 20px;
-  border: 3px solid #0400ff;
+  border: 2px solid #0288d1;
   top: 18px;
   left: -30px;
 }
@@ -184,6 +192,9 @@ body {
   left: 140px;
   background-image: url(../img/chevron_up_solid.png);
 }
+.container .filters .filters-wrapper .dropdown.show .btn[aria-expanded*=true] {
+  border: 1px solid #0288D1;
+}
 .container .filters .filters-wrapper .dropdown .btn {
   display: flex;
 }
@@ -219,13 +230,18 @@ body {
   font-weight: bold;
   color: #34495D;
 }
-.container .content table .data-table tr {
+.container .content table .checked-item {
   border-top: 1px solid #C2CFE0;
-  background: #eeeede;
 }
-.container .content table .table-tr {
-  border-top: 1px solid #C2CFE0;
-  background: #FB6868;
+.container .content table .link-img-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+.container .content table .link-img-wrapper img {
+  margin-right: 17px;
+  margin-left: -14px;
 }
 .container .content table .checkbox {
   display: block;
@@ -249,10 +265,14 @@ body {
 .container .content table .recrewl:hover {
   background: #D2EFFF;
 }
-.container .content table .remove {
-  display: flex;
-  margin: 0 auto;
-  fill: red;
+.container .content table .remove div {
+  width: 20px;
+  height: 30px;
+  background-image: url(../img/trash.svg);
+  background-repeat: no-repeat;
+}
+.container .content table .remove div:hover {
+  background-position-x: -27px;
 }
 
 /*# sourceMappingURL=style.css.map */
