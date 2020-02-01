@@ -230,9 +230,6 @@ body {
   font-weight: bold;
   color: #34495D;
 }
-.container .content table .checked-item {
-  border-top: 1px solid #C2CFE0;
-}
 .container .content table .link-img-wrapper {
   display: flex;
   justify-content: space-between;

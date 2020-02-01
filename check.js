@@ -4,9 +4,9 @@ function AddCheckboxEvents(row) {
     for (const checkBox of checkboxes) {
         checkBox.onclick = function () {
             if (checkBox.checked) {
-                row.style.color = '#C2CFE0'
+                row.style.background = '#E7F6FF'
             } else {
-                row.style.color = 'initial'
+                row.style.background = 'none'
             }
         }
     }
