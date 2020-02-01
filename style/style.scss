@@ -22,7 +22,11 @@ $border-primary-color: 1px solid $primary-color;
     outline: none;  
     background: #FFFFFF;
     color: #34495D;
-    text-align: left;
+    text-align: left;    
+    box-shadow: none;
+    &.active{
+        border: 1px solid $third-color;
+    }
 }
 
 body {
@@ -113,6 +117,9 @@ body {
                 padding: 0 21px 12px 18px;
             }
             &.dropdown-single{
+                &.active{
+                    border-color: rgba(2,136,209);
+                }
                 .dropdown-options{
                     z-index: 100000;
                     position: relative;
@@ -123,27 +130,27 @@ body {
                         list-style: none;
                         display: block;
                         
-                        &.active::before{
-                            background: rgb(10, 218, 20); 
-                                                       
+                        &.active::after{
+                            background:radial-gradient(circle, rgba(2,136,209,0.15) 0%, rgba(2,136,209,0.45) 35%, rgba(2,136,209,1) 100%);                         
+                            visibility: visible;                          
                         }
-                        &::after {
-                            background: rgb(153, 60, 17);
+                        &::after {                            
                             width: 6px;
                             height: 6px;
                             top: -11px;
                             left: -23px;
+                            visibility: hidden;
                         }
                         &::before, &::after{
                             position: relative;
-                            content:'';                            
-                            display: block;
+                            content:'';   
+                            display: block;  
                             border-radius: 50%;
                         }
-                        &::before{                            
+                        &::before{                        
                             width: 20px;
                             height: 20px;
-                            border: 3px solid rgb(4, 0, 255);                           
+                            border: 2px solid rgba(2,136,209);                       
                             top: 18px;
                             left: -30px;
                         }
@@ -206,6 +213,9 @@ body {
                  left: 140px;
                  background-image: url(../img/chevron_up_solid.png);
              }
+                &.show .btn[aria-expanded*="true"] {
+                    border: 1px solid $third-color;
+                }
                 .btn {
                     @extend %buttons;
                     display: flex;
@@ -251,13 +261,20 @@ body {
             }
             
         }
-        .data-table tr {
-            border-top: 1px solid #C2CFE0;
-            background: rgb(238, 238, 222);
+        .checked-item {
+            border-top: 1px solid $primary-color;
+
         }
-        .table-tr {
-            border-top: 1px solid #C2CFE0;
-            background: $danger-color;
+        
+        .link-img-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 18px;
+            img {
+                margin-right: 17px;
+                margin-left: -14px;
+            }
         }
         .checkbox {
             display: block;
@@ -282,11 +299,16 @@ body {
                     background: #D2EFFF;
             }
         }
-        .remove {
-            display: flex;
-        margin: 0 auto;
-            fill: red;
-          }
+        .remove div{                
+                width: 20px;
+                height: 30px;
+                background-image: url(../img/trash.svg);
+                background-repeat: no-repeat;
+
+            &:hover {
+            background-position-x: -27px;
+        } 
+    }         
     }
- }
+}
 }
