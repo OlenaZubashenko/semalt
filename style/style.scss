@@ -295,7 +295,9 @@ body {
                     background: #D2EFFF;
             }
         }
-        .remove div{                
+        .remove div{  
+                margin: 0 auto;
+                cursor: pointer;              
                 width: 20px;
                 height: 30px;
                 background-image: url(../img/trash.svg);
